@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarnished Portfolio</title>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+</head>
+<body>
+<div class="bg-overlay"></div>
+<div class="particles" id="particles"></div>
+<div class="runes"></div>
+
+<div class="section-indicator" id="sectionIndicator">Character Stats</div>
+
+<div class="container">
+    <!-- Character Stats Section -->
+    <div class="section active" id="stats">
+        <h1 class="section-title">Character Stats</h1>
+        <div class="character-container">
+            <div class="character-left-panel">
+                <div class="xp-container">
+                    <div class="xp-label">
+                        <svg class="xp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        Experience: Level <span id="playerLevel">1</span>
+                    </div>
+                    <div class="stat-bar">
+                        <div class="stat-fill" id="xpBar"></div>
+                    </div>
+                    <div class="stat-label">
+                        <span id="xpDisplay">0 / 1000 XP</span>
+                    </div>
+                </div>
+
+                <div class="character-image">
+                    <img src="benmalek.png" alt="Character">
+                    <div class="character-name" id="characterName">Tarnished</div>
+                    <div class="character-class">Game Development Seeker</div>
+
+                    <div class="vital-bars">
+                        <div class="vital-bar-container">
+                            <div class="vital-bar health">
+                                <div class="vital-fill health" data-value="100"></div>
+                            </div>
+                        </div>
+
+                        <div class="vital-bar-container">
+                            <div class="vital-bar magic">
+                                <div class="vital-fill magic" data-value="100"></div>
+                            </div>
+                        </div>
+
+                        <div class="vital-bar-container">
+                            <div class="vital-bar stamina">
+                                <div class="vital-fill stamina" data-value="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-category">
+                    <h3>
+                        <i class="fi fi-rr-sword" style="color:#d4af37;"></i>
+                        Hard Skills
+                    </h3>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Lua</span><span>85</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="85"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Python</span><span>60</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="60"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Javascript</span><span>78</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="78"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Node JS</span><span>75</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="75"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Roblox Studio</span><span>69</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="69"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Mongo DB</span><span>70</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="70"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Flutter</span><span>65</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="65"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Dart</span><span>70</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="70"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>C++</span><span>70</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="70"></div></div>
+                    </div>
+                </div>
+
+                <div class="stat-category">
+                    <h3>
+                        <i class="fi fi-rr-shield" style="color:#d4af37;"></i>
+                        Soft Skills
+                    </h3>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Problem Solving</span><span>75</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="75"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Teamwork</span><span>55</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="55"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Creativity</span><span>80</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="80"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Adaptability</span><span>75</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="75"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Communication</span><span>50</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="50"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skill Tree Section -->
+    <div class="section" id="skills">
+        <div class="skill-tree-ui">
+            <div class="skill-points">Skill Points: <span id="skillPointsDisplay">0</span></div>
+            <div style="font-size: 0.9rem; color: #b8956a; margin-top: 5px;">Click nodes to unlock</div>
+        </div>
+        <div class="zoom-controls">
+            <button class="zoom-btn" id="zoomIn">+</button>
+            <button class="zoom-btn" id="zoomOut">−</button>
+            <button class="zoom-btn" id="resetZoom" style="font-size: 1rem;">⟲</button>
+        </div>
+        <div class="skill-tree-container" id="skillTreeContainer">
+            <div class="skill-tree-canvas" id="skillTreeCanvas"></div>
+        </div>
+    </div>
+
+    <!-- Inventory Section -->
+    <div class="section" id="inventory">
+        <div class="inventory-grid">
+
+            <div class="inventory-slot">
+                <div class="inventory-rarity rarity-legendary"></div>
+                <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                </svg>
+                <div class="inventory-name">YACK Prototype</div>
+                <div class="inventory-type">Security App</div>
+            </div>
+
+            <div class="inventory-slot">
+                <div class="inventory-rarity rarity-epic"></div>
+                <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                </svg>
+                <div class="inventory-name">World of Elements Battle Ground</div>
+                <div class="inventory-type">Roblox Game</div>
+            </div>
+
+            <div class="inventory-slot">
+                <div class="inventory-rarity rarity-rare"></div>
+                <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+                <div class="inventory-name">OurJoy</div>
+                <div class="inventory-type">Adventure Horror Game</div>
+            </div>
+
+            <div class="inventory-slot">
+                <div class="inventory-rarity rarity-epic"></div>
+                <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 16 16 12 12 8"/>
+                    <line x1="8" y1="12" x2="16" y2="12"/>
+                </svg>
+                <div class="inventory-name">ColorTris</div>
+                <div class="inventory-type">JavaScript Game</div>
+            </div>
+
+            <div class="inventory-slot">
+                <div class="inventory-rarity rarity-legendary"></div>
+                <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+                <div class="inventory-name">Portfolio Codex</div>
+                <div class="inventory-type">Artifact</div>
+            </div>
+
+            <div class="inventory-slot">
+                <div class="inventory-rarity rarity-rare"></div>
+                <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                </svg>
+                <div class="inventory-name">GitHub Repository</div>
+                <div class="inventory-type">Tool</div>
+            </div>
+
+            <div class="inventory-slot">
+                <div class="inventory-rarity rarity-rare"></div>
+                <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                </svg>
+                <div class="inventory-name">LinkedIn Profile</div>
+                <div class="inventory-type">Connection</div>
+            </div>
+
+            <div class="inventory-slot">
+                <div class="inventory-rarity rarity-epic"></div>
+                <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+                <div class="inventory-name">Certificates</div>
+                <div class="inventory-type">Achievement</div>
+            </div>
+
+            <div class="inventory-slot">
+                <div class="inventory-rarity rarity-common"></div>
+                <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                </svg>
+                <div class="inventory-name">Resume</div>
+                <div class="inventory-type">Document</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="section" id="projects">
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <div class="project-title">YACK – Your Agreement Contract Keeper</div>
+                <div class="project-description">
+                    A secure mobile app for creating and signing digital contracts. Uses hashing to ensure data integrity,
+                    with future blockchain and GPS verification features planned.
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Flutter</span>
+                    <span class="project-tag">Firebase</span>
+<!--                    <span class="project-tag">Blockchain</span>-->
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">World of Elements Battle Ground</div>
+                <div class="project-description">
+                    A Roblox fighting game featuring elemental classes, ultimate skills, bosses, and dynamic combat mechanics.
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Roblox</span>
+                    <span class="project-tag">Lua</span>
+                    <span class="project-tag">Game Dev</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">OurJoy</div>
+                <div class="project-description">
+                    A horror-adventure Roblox game set in a surgical facility with puzzles, traps, and multi-boss encounters.
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Roblox</span>
+                    <span class="project-tag">Game Design</span>
+                    <span class="project-tag">Horror</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">ColorTris</div>
+                <div class="project-description">
+                    A JavaScript puzzle game inspired by Tetris with smooth animations, sound effects, and color-matching mechanics.
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">JavaScript</span>
+                    <span class="project-tag">HTML</span>
+                    <span class="project-tag">CSS</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">Portfolio Codex</div>
+                <div class="project-description">
+                    A responsive personal portfolio website built with HTML, CSS, and JavaScript showcasing my RPG-themed projects.
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Frontend</span>
+                    <span class="project-tag">HTML</span>
+                    <span class="project-tag">CSS</span>
+                    <span class="project-tag">JavaScript</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="section" id="contact">
+        <div class="contact-container">
+            <div class="contact-item">
+                <div class="contact-label">📧 Email</div>
+                <div class="contact-value">tarnished@elden-portfolio.com</div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-label">💼 LinkedIn</div>
+                <div class="contact-value">linkedin.com/in/data-science-seeker</div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-label">🎮 GitHub</div>
+                <div class="contact-value">github.com/tarnished-coder</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="nav-buttons">
+    <button class="nav-btn" id="prevBtn">◄</button>
+    <button class="nav-btn" id="nextBtn">►</button>
+</div>
+
+</body>
+</html>
