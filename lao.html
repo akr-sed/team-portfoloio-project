@@ -150,6 +150,41 @@
         </div>
     </div>
 
+    <!-- ColorTris Game Section -->
+    <div class="section" id="colortris">
+        <div class="game-wrapper">
+            <div class="game-board-container">
+                <h2 class="game-title">RUINS OF COLORTRIS</h2>
+                <h1 id="LS">DEFEAT</h1>
+                <h1 id="WS">VICTORY!</h1>
+                <div id="Main"></div>
+            </div>
+
+            <div class="game-controls">
+                <div class="game-stats">
+                    <div class="game-stat-item">Best Score: <span id="BScore">0</span></div>
+                    <div class="game-stat-item">Current Score: <span id="score">0</span></div>
+                    <div class="game-stat-item">Skill Points: <span id="gameSkillPoints">0</span></div>
+                </div>
+
+                <div class="control-buttons">
+                    <button id="playButton">BEGIN TRIAL</button>
+
+                    <div class="button-grid">
+                        <div></div>
+                        <button id="RotateButton" class="control-button">↻</button>
+                        <div></div>
+                        <button id="LButton" class="control-button">←</button>
+                        <button id="DButton" class="control-button">↓</button>
+                        <button id="RButton" class="control-button">→</button>
+                    </div>
+
+                    <button id="Exit">END TRIAL</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Skill Tree Section -->
     <div class="section" id="skills">
         <div class="skill-tree-ui">
@@ -261,6 +296,16 @@
             </div>
 
         </div>
+    </div>
+
+
+    <!-- Trap Section -->
+    <div class="section" id="trap" style="display: none;">
+        <div class="trap-overlay"></div>
+        <div class="trap-light" id="trapLight"></div>
+        <div class="trap-message">You've been cursed!</div>
+        <button class="trap-button" id="trapPrevBtn">◄</button>
+        <button class="trap-button" id="trapNextBtn">►</button>
     </div>
 
     <!-- Projects Section -->
