@@ -9,7 +9,7 @@ let fireSound = new Audio('data:audio/wav;base64,UklGRiQEAABXQVZFZm10IBAAAAABAAE
 
 // Game State
 let playerXP = 0;
-let playerLevel = 1;
+let playerLevel = 40;
 let skillPoints = 10;
 let xpToNextLevel = 100;
 

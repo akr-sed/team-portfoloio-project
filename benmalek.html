@@ -436,7 +436,7 @@
     function checkTrap() {
         if (!trapActive && !doorsActive && Math.random() < 0.15) {
             const trapType = Math.random();
-            if (trapType < 0.5) {
+            if (trapType < 0.7) {
                 activateTrap(); // Original cursor trap
             } else {
                 activateMemoryTrap(); // New Memory trap
