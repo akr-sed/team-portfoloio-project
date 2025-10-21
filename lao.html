@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarnished Portfolio</title>
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/cardsGame.css">
+    <link rel="stylesheet" href="benmalek/style/style.css">
+    <link rel="stylesheet" href="benmalek/style/cardsGame.css">
+    <link rel="stylesheet" href="benmalek/style/welcome.css">
 
 </head>
 <body>
@@ -17,6 +18,22 @@
 <div class="section-indicator" id="sectionIndicator">Character Stats</div>
 
 <div class="container">
+
+    <!-- Welcome Screen -->
+    <div id="welcome">
+        <div class="welcome-overlay"></div>
+        <div class="welcome-content">
+            <h1 class="welcome-title">Benmalek Mohamed Aymen</h1>
+            <p class="welcome-subtitle">AI & Datascience student</p>
+            <p class="welcome-description">
+                A game is where imagination meets creation — a world shaped by the developer’s vision, guided by their own rules, and brought to life through code and creativity.            </p>
+            <button class="explore-button" id="exploreBtn">
+                <span>⚔ EXPLORE THE DEPTHS ⚔</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="cave-transition" id="caveTransition"></div>
     <!-- Character Stats Section -->
     <div class="section active" id="stats">
         <h1 class="section-title">Character Stats</h1>
@@ -39,7 +56,7 @@
                 </div>
 
                 <div class="character-image">
-                    <img src="benmalek.png" alt="Character">
+                    <img src="benmalek/benmalek.png" alt="Character">
                     <div class="character-name" id="characterName">Tarnished</div>
                     <div class="character-class">Game Development Seeker</div>
 
@@ -208,13 +225,17 @@
     <div class="section" id="inventory">
         <div class="inventory-grid">
 
-            <div class="inventory-slot">
-                <div class="inventory-rarity rarity-legendary"></div>
+            <div class="inventory-slot" onclick="window.open('https://aaayme.github.io/DotsChat/', '_blank')">
+                <div class="inventory-rarity rarity-epic"></div>
                 <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                    <circle cx="12" cy="12" r="10"/>
+                    <circle cx="8" cy="10" r="1.5"/>
+                    <circle cx="12" cy="10" r="1.5"/>
+                    <circle cx="16" cy="10" r="1.5"/>
+                    <path d="M7 14h10" />
                 </svg>
-                <div class="inventory-name">YACK Prototype</div>
-                <div class="inventory-type">Security App</div>
+                <div class="inventory-name">DotsChat</div>
+                <div class="inventory-type">Telegram like app</div>
             </div>
 
             <div class="inventory-slot">
@@ -227,7 +248,7 @@
                 <div class="inventory-type">Roblox Game</div>
             </div>
 
-            <div class="inventory-slot">
+            <div class="inventory-slot" onclick="window.open('https://aaayme.github.io/OurJoy-Official-Website/progress.html', '_blank')">
                 <div class="inventory-rarity rarity-rare"></div>
                 <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
@@ -236,8 +257,8 @@
                 <div class="inventory-type">Adventure Horror Game</div>
             </div>
 
-            <div class="inventory-slot">
-                <div class="inventory-rarity rarity-epic"></div>
+            <div class="inventory-slot" onclick="window.open('https://aaayme-c.github.io/AION-Verse/ColorTris.html', '_blank')">
+                <div class="inventory-rarity rarity-uncommon"></div>
                 <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <circle cx="12" cy="12" r="10"/>
                     <polyline points="12 16 16 12 12 8"/>
@@ -259,7 +280,7 @@
                 <div class="inventory-type">Artifact</div>
             </div>
 
-            <div class="inventory-slot">
+            <div class="inventory-slot" onclick="window.open('https://github.com/generalBenmalek', '_blank')">
                 <div class="inventory-rarity rarity-rare"></div>
                 <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
@@ -269,34 +290,16 @@
                 <div class="inventory-type">Tool</div>
             </div>
 
-            <div class="inventory-slot">
+            <div class="inventory-slot" onclick="window.open('https://github.com/aaayme', '_blank')">
                 <div class="inventory-rarity rarity-rare"></div>
                 <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
                     <circle cx="9" cy="7" r="4"/>
                 </svg>
-                <div class="inventory-name">LinkedIn Profile</div>
-                <div class="inventory-type">Connection</div>
+                <div class="inventory-name">GitHub Personal</div>
+                <div class="inventory-type">Tool</div>
             </div>
 
-            <div class="inventory-slot">
-                <div class="inventory-rarity rarity-epic"></div>
-                <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                </svg>
-                <div class="inventory-name">Certificates</div>
-                <div class="inventory-type">Achievement</div>
-            </div>
-
-            <div class="inventory-slot">
-                <div class="inventory-rarity rarity-common"></div>
-                <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                    <circle cx="9" cy="7" r="4"/>
-                </svg>
-                <div class="inventory-name">Resume</div>
-                <div class="inventory-type">Document</div>
-            </div>
 
         </div>
     </div>
@@ -331,17 +334,20 @@
         <div class="projects-grid">
 
             <div class="project-card">
-                <div class="project-title">YACK – Your Agreement Contract Keeper</div>
+                <div class="project-title">DotsChat – Chat Platform</div>
                 <div class="project-description">
-                    A secure mobile app for creating and signing digital contracts. Uses hashing to ensure data integrity,
-                    with future blockchain and GPS verification features planned.
+                    A modern messaging platform similar to Telegram, built with Flutter and Node.js.
+                    Features real-time chats, secure message handling, and MongoDB-based data storage
+                    for scalability and performance.
                 </div>
                 <div class="project-tags">
                     <span class="project-tag">Flutter</span>
-                    <span class="project-tag">Firebase</span>
-<!--                    <span class="project-tag">Blockchain</span>-->
+                    <span class="project-tag">Node.js</span>
+                    <span class="project-tag">MongoDB</span>
+                    <span class="project-tag">Socket.IO</span>
                 </div>
             </div>
+
 
             <div class="project-card">
                 <div class="project-title">World of Elements Battle Ground</div>
@@ -349,9 +355,8 @@
                     A Roblox fighting game featuring elemental classes, ultimate skills, bosses, and dynamic combat mechanics.
                 </div>
                 <div class="project-tags">
-                    <span class="project-tag">Roblox</span>
+                    <span class="project-tag">Roblox Studio</span>
                     <span class="project-tag">Lua</span>
-                    <span class="project-tag">Game Dev</span>
                 </div>
             </div>
 
@@ -361,9 +366,8 @@
                     A horror-adventure Roblox game set in a surgical facility with puzzles, traps, and multi-boss encounters.
                 </div>
                 <div class="project-tags">
-                    <span class="project-tag">Roblox</span>
-                    <span class="project-tag">Game Design</span>
-                    <span class="project-tag">Horror</span>
+                    <span class="project-tag">Roblox Studio</span>
+                    <span class="project-tag">Lua</span>
                 </div>
             </div>
 
@@ -385,10 +389,9 @@
                     A responsive personal portfolio website built with HTML, CSS, and JavaScript showcasing my RPG-themed projects.
                 </div>
                 <div class="project-tags">
-                    <span class="project-tag">Frontend</span>
+                    <span class="project-tag">JavaScript</span>
                     <span class="project-tag">HTML</span>
                     <span class="project-tag">CSS</span>
-                    <span class="project-tag">JavaScript</span>
                 </div>
             </div>
 
@@ -399,18 +402,18 @@
     <div class="section" id="contact">
         <div class="contact-container">
             <div class="contact-item">
-                <div class="contact-label">📧 Email</div>
-                <div class="contact-value">tarnished@elden-portfolio.com</div>
+                <div class="contact-label">📧 Email Personal</div>
+                <div class="contact-value">omary2663@gmail.com</div>
             </div>
 
-            <div class="contact-item">
-                <div class="contact-label">💼 LinkedIn</div>
-                <div class="contact-value">linkedin.com/in/data-science-seeker</div>
+            <div class="contact-item" onclick="window.open('https://github.com/aaayme', '_blank')">
+                <div class="contact-label">🎮 GitHub Personal</div>
+                <div class="contact-value">https://github.com/aaayme</div>
             </div>
 
-            <div class="contact-item">
-                <div class="contact-label">🎮 GitHub</div>
-                <div class="contact-value">github.com/tarnished-coder</div>
+            <div class="contact-item" onclick="window.open('https://github.com/generalBenmalek', '_blank')">
+                <div class="contact-label">🎮 GitHub School</div>
+                <div class="contact-value">https://github.com/generalBenmalek</div>
             </div>
         </div>
     </div>
@@ -421,10 +424,11 @@
     <button class="nav-btn" id="nextBtn">►</button>
 </div>
 
-<script src="js/config.js"></script>
-<script src="js/colorTris.js"></script>
-<script src="js/cardGame.js"></script>
-<script src="js/navigator.js"></script>
+<script src="benmalek/js/welcome.js"></script>
+<script src="benmalek/js/config.js"></script>
+<script src="benmalek/js/colorTris.js"></script>
+<script src="benmalek/js/cardGame.js"></script>
+<script src="benmalek/js/navigator.js"></script>
 
 <script>
 
@@ -869,10 +873,16 @@
         if (e.key === 'ArrowLeft' && !document.getElementById('playButton').style.display === 'none') prevSection();
     });
 
+    // Initialize
     createParticles();
-    animateStats();
+    // Don't call animateStats() here anymore - it will be called when section is shown
     updateXPDisplay();
     updateSkillPoints();
+
+    // Hide all sections initially
+    document.querySelectorAll('.section').forEach(s => {
+        s.style.display = 'none';
+    });
 </script>
 </body>
 </html>
