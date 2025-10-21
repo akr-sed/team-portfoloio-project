@@ -234,8 +234,10 @@ header {
 }
 
 .hero-image img {
-    max-width: 400px;
-    border-radius: 20px;
+    width: 380px;             
+    height: 230px;            
+    object-fit: cover;        
+    border-radius: 15px;       
     box-shadow: var(--box-shadow);
 }
 
