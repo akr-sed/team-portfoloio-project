@@ -1,27 +1,14 @@
 :root {
-        --primary-color: #2ecc71;
-        /* Main green */
-        --primary-dark: #27ae60;
-        /* Darker shade for hover or emphasis */
-        --primary-light: #a8e6cf;
-        /* Light green for highlights */
-        --secondary-color: #145a32;
-        /* Deep forest green for accents */
-        --text-color: #2f3e30;
-        /* Dark muted green-gray for text */
-        --light-text: #f8f9fa;
-        /* Light text for dark backgrounds */
-        --background-color: #ffffff;
-        /* Clean white background */
-        --light-gray: #f1f8f4;
-        /* Very light green-gray for backgrounds */
-        --medium-gray: #c8e6c9;
-        /* Mid-tone soft green-gray for borders */
-        --dark-gray: #6b8f71;
-        /* Muted dark green-gray for subtle contrast */
-        --box-shadow: 0 5px 15px rgba(0, 128, 0, 0.1);
-        --transition: all 0.3s ease;
-    }
+    
+    --text-color: #333333;
+    --light-text: #f8f9fa;
+    --background-color: #ffffff;
+    --light-gray: #f5f5f5;
+    --medium-gray: #e0e0e0;
+    --dark-gray: #888888;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
 
 * {
     margin: 0;
@@ -119,7 +106,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
+    padding: 20px 5% ;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -312,7 +299,7 @@ header {
 }
 
 .about-text h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 20px;
     color: var(--secondary-color);
@@ -450,7 +437,7 @@ header {
     color: var(--secondary-color);
 }
 
-.contact-info>p {
+.contact-info > p {
     margin-bottom: 30px;
 }
 
@@ -488,25 +475,25 @@ header {
         text-align: center;
         margin-bottom: 25px;
     }
-
+    
     .contact-item i {
         margin-right: 0;
         margin-bottom: 10px;
     }
-
+    
     .contact-info h3 {
         font-size: 1.5rem;
         text-align: center;
     }
-
-    .contact-info>p {
+    
+    .contact-info > p {
         text-align: center;
     }
-
+    
     .contact-form button {
         width: 100%;
     }
-
+    
     .social-icons {
         justify-content: center;
     }
@@ -516,26 +503,26 @@ header {
     .contact-info {
         min-width: 100%;
     }
-
+    
     .contact-form {
         min-width: 100%;
     }
-
+    
     .form-group input,
     .form-group textarea {
         padding: 10px 12px;
         font-size: 0.9rem;
     }
-
+    
     .contact-item p {
         font-size: 0.9rem;
         word-break: break-word;
     }
-
+    
     .contact-info h3 {
         font-size: 1.3rem;
     }
-
+    
     .contact-form button {
         padding: 10px 20px;
         font-size: 0.9rem;
@@ -658,32 +645,17 @@ footer {
         animation: fadeInItems 0.5s ease forwards;
     }
 
-    .nav-links li:nth-child(1) {
-        animation-delay: 0.2s;
-    }
-
-    .nav-links li:nth-child(2) {
-        animation-delay: 0.3s;
-    }
-
-    .nav-links li:nth-child(3) {
-        animation-delay: 0.4s;
-    }
-
-    .nav-links li:nth-child(4) {
-        animation-delay: 0.5s;
-    }
-
-    .nav-links li:nth-child(5) {
-        animation-delay: 0.6s;
-    }
+    .nav-links li:nth-child(1) { animation-delay: 0.2s; }
+    .nav-links li:nth-child(2) { animation-delay: 0.3s; }
+    .nav-links li:nth-child(3) { animation-delay: 0.4s; }
+    .nav-links li:nth-child(4) { animation-delay: 0.5s; }
+    .nav-links li:nth-child(5) { animation-delay: 0.6s; }
 
     @keyframes fadeInItems {
         from {
             opacity: 0;
             transform: translateY(10px);
         }
-
         to {
             opacity: 1;
             transform: translateY(0);
@@ -691,23 +663,13 @@ footer {
     }
 
     @keyframes slideIn {
-        from {
-            left: -100%;
-        }
-
-        to {
-            left: 0;
-        }
+        from { left: -100%; }
+        to { left: 0; }
     }
 
     @keyframes slideOut {
-        from {
-            left: 0;
-        }
-
-        to {
-            left: -100%;
-        }
+        from { left: 0; }
+        to { left: -100%; }
     }
 
     .hamburger {
@@ -802,119 +764,101 @@ footer {
     }
 }
 
-@media screen and (max-width: 514px) {
+@media screen and (max-width: 514px){
     .hamburger {
         display: block;
         position: absolute;
         right: 20px;
     }
-
-    .navbar {
+    .navbar{
         padding: 20px 5%;
         justify-content: space-between;
         position: relative;
     }
-
     .nav-links {
         top: 60px;
     }
-
     .logo h1 {
         font-size: 1.5rem;
     }
 }
 
-@media screen and (max-width: 450px) {
-
+@media screen and (max-width: 450px){
     /* Header fixes */
     .hamburger {
         right: 10px;
     }
-
     .navbar {
         padding: 15px 3%;
     }
-
     .logo h1 {
         font-size: 1.3rem;
     }
-
     .nav-links {
         top: 50px;
     }
-
     .bar {
         width: 22px;
         height: 2px;
         margin: 4px auto;
     }
-
     header {
         min-height: 50px;
     }
-
+    
     /* Hero section fixes */
     .hero {
         padding-top: 120px;
         padding-bottom: 60px;
     }
-
     .hero-text h1 {
         font-size: 1.8rem;
     }
-
     .hero-text h2 {
         font-size: 1.1rem;
     }
-
     .hero-text p {
         font-size: 0.9rem;
     }
-
     .hero-image {
         margin-top: 30px;
     }
-
     .hero-image img {
         max-width: 200px;
         margin: 0 auto;
     }
-
+    
     /* Section header fixes */
     .section-header h2 {
         font-size: 1.8rem;
     }
-
+    
     /* About section fixes */
     .about-text h3 {
         font-size: 1.5rem;
     }
-
     .about-text p {
         font-size: 0.9rem;
     }
-
     .info-item {
         padding: 15px;
     }
-
+    
     /* Skills section fixes */
     .skill-card {
         width: 110px;
         padding: 15px;
     }
-
     .skill-card i {
         font-size: 2rem;
     }
-
+    
     /* Footer fixes */
     .footer-content {
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
-
     .footer-links {
         justify-content: center;
         flex-wrap: wrap;
