@@ -1,0 +1,182 @@
+/* Welcome Screen */
+#welcome {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('../wallpaper.jpg') no-repeat fixed;
+    background-size: cover;
+    overflow: hidden;
+    transition: transform 2s ease-in-out;
+}
+
+#welcome.descending {
+    transform: translateY(-100vh);
+}
+
+.welcome-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+    z-index: 1;
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(145deg, rgba(26, 26, 26, 0.95), rgba(13, 13, 13, 0.95));
+    border: 4px solid #d4af37;
+    box-shadow: 0 0 60px rgba(212, 175, 55, 0.6);
+    max-width: 700px;
+    animation: welcomeFadeIn 1.5s ease-out;
+}
+
+@keyframes welcomeFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    color: #f4e4b0;
+    text-shadow: 0 0 30px rgba(212, 175, 55, 0.8);
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+.welcome-subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: #d4af37;
+    margin-bottom: 30px;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.welcome-description {
+    font-family: 'Almendra', serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #b8956a;
+    margin-bottom: 40px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.explore-button {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    padding: 20px 60px;
+    background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+    border: 4px solid #d4af37;
+    color: #d4af37;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.explore-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.explore-button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.explore-button:hover {
+    background: #d4af37;
+    color: #0a0a0a;
+    box-shadow: 0 0 50px rgba(212, 175, 55, 0.8);
+    transform: scale(1.05);
+}
+
+.explore-button span {
+    position: relative;
+    z-index: 1;
+}
+
+.cave-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+    transition: transform 2s ease-in-out;
+    transform: translateY(100vh);
+
+}
+
+.cave-transition.active {
+    opacity: 1;
+    transform: translateY(-0vh);
+
+    /*animation: descendToCave 3s ease-in-out forwards;*/
+}
+
+@keyframes descendToCave {
+    0% {
+        transform: translateY(0);
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(0.5);
+    }
+    100% {
+        transform: translateY(100vh);
+        filter: brightness(0.3);
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome-title {
+        font-size: 2rem;
+    }
+
+    .welcome-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .welcome-description {
+        font-size: 1rem;
+    }
+
+    .explore-button {
+        font-size: 1.2rem;
+        padding: 15px 40px;
+    }
+}

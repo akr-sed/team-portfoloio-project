@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarnished Portfolio</title>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="benmalek/style/style.css">
+    <link rel="stylesheet" href="benmalek/style/cardsGame.css">
+    <link rel="stylesheet" href="benmalek/style/welcome.css">
+
+</head>
+<body>
+<div class="bg-overlay"></div>
+<div class="particles" id="particles"></div>
+<div class="runes"></div>
+
+<div class="section-indicator" id="sectionIndicator">Character Stats</div>
+
+<div class="container">
+
+    <!-- Welcome Screen -->
+    <div id="welcome">
+        <div class="welcome-overlay"></div>
+        <div class="welcome-content">
+            <h1 class="welcome-title">Benmalek Mohamed Aymen</h1>
+            <p class="welcome-subtitle">AI & Datascience student</p>
+            <p class="welcome-description">
+                A game is where imagination meets creation — a world shaped by the developer’s vision, guided by their own rules, and brought to life through code and creativity.            </p>
+            <button class="explore-button" id="exploreBtn">
+                <span>⚔ EXPLORE THE DEPTHS ⚔</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="cave-transition" id="caveTransition"></div>
+    <!-- Character Stats Section -->
+    <div class="section active" id="stats">
+        <h1 class="section-title">Character Stats</h1>
+        <div class="character-container">
+            <div class="character-left-panel">
+                <div class="xp-container">
+                    <div class="xp-label">
+                        <svg class="xp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        Experience: Level <span id="playerLevel">1</span>
+                    </div>
+                    <div class="stat-bar">
+                        <div class="stat-fill" id="xpBar"></div>
+                    </div>
+                    <div class="stat-label">
+                        <span id="xpDisplay">0 / 1000 XP</span>
+                    </div>
+                </div>
+
+                <div class="character-image">
+                    <img src="benmalek/benmalek.png" alt="Character">
+                    <div class="character-name" id="characterName">Tarnished</div>
+                    <div class="character-class">Game Development Seeker</div>
+
+                    <div class="vital-bars">
+                        <div class="vital-bar-container">
+                            <div class="vital-bar health">
+                                <div class="vital-fill health" data-value="100"></div>
+                            </div>
+                        </div>
+
+                        <div class="vital-bar-container">
+                            <div class="vital-bar magic">
+                                <div class="vital-fill magic" data-value="100"></div>
+                            </div>
+                        </div>
+
+                        <div class="vital-bar-container">
+                            <div class="vital-bar stamina">
+                                <div class="vital-fill stamina" data-value="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-category">
+                    <h3>
+                        <i class="fi fi-rr-sword" style="color:#d4af37;"></i>
+                        Hard Skills
+                    </h3>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Lua</span><span>85</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="85"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Python</span><span>60</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="60"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Javascript</span><span>78</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="78"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Node JS</span><span>75</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="75"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Roblox Studio</span><span>69</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="69"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Mongo DB</span><span>70</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="70"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Flutter</span><span>65</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="65"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Dart</span><span>70</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="70"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>C++</span><span>70</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="70"></div></div>
+                    </div>
+                </div>
+
+                <div class="stat-category">
+                    <h3>
+                        <i class="fi fi-rr-shield" style="color:#d4af37;"></i>
+                        Soft Skills
+                    </h3>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Problem Solving</span><span>75</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="75"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Teamwork</span><span>55</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="55"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Creativity</span><span>80</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="80"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Adaptability</span><span>75</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="75"></div></div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-label"><span>Communication</span><span>50</span></div>
+                        <div class="stat-bar"><div class="stat-fill" data-value="50"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ColorTris Game Section -->
+    <div class="section" id="colortris">
+        <div class="game-wrapper">
+            <div class="game-board-container">
+                <h2 class="game-title">RUINS OF COLORTRIS</h2>
+                <h1 id="LS">DEFEAT</h1>
+                <h1 id="WS">VICTORY!</h1>
+                <div id="Main"></div>
+            </div>
+
+            <div class="game-controls">
+                <div class="game-stats">
+                    <div class="game-stat-item">Best Score: <span id="BScore">0</span></div>
+                    <div class="game-stat-item">Current Score: <span id="score">0</span></div>
+                    <div class="game-stat-item">Skill Points: <span id="gameSkillPoints">0</span></div>
+                </div>
+
+                <div class="control-buttons">
+                    <button id="playButton">BEGIN TRIAL</button>
+
+                    <div class="button-grid">
+                        <div></div>
+                        <button id="RotateButton" class="control-button">↻</button>
+                        <div></div>
+                        <button id="LButton" class="control-button">←</button>
+                        <button id="DButton" class="control-button">↓</button>
+                        <button id="RButton" class="control-button">→</button>
+                    </div>
+
+                    <button id="Exit">END TRIAL</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skill Tree Section -->
+    <div class="section" id="skills">
+        <div class="skill-tree-ui">
+            <div class="skill-points">Skill Points: <span id="skillPointsDisplay">0</span></div>
+            <div style="font-size: 0.9rem; color: #b8956a; margin-top: 5px;">Click nodes to unlock</div>
+        </div>
+        <div class="zoom-controls">
+            <button class="zoom-btn" id="zoomIn">+</button>
+            <button class="zoom-btn" id="zoomOut">−</button>
+            <button class="zoom-btn" id="resetZoom" style="font-size: 1rem;">⟲</button>
+        </div>
+        <div class="skill-tree-container" id="skillTreeContainer">
+            <div class="skill-tree-canvas" id="skillTreeCanvas"></div>
+        </div>
+    </div>
+
+    <!-- Inventory Section -->
+    <div class="section" id="inventory">
+        <div class="inventory-grid">
+
+            <div class="inventory-slot" onclick="window.open('https://aaayme.github.io/DotsChat/', '_blank')">
+                <div class="inventory-rarity rarity-epic"></div>
+                <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <circle cx="8" cy="10" r="1.5"/>
+                    <circle cx="12" cy="10" r="1.5"/>
+                    <circle cx="16" cy="10" r="1.5"/>
+                    <path d="M7 14h10" />
+                </svg>
+                <div class="inventory-name">DotsChat</div>
+                <div class="inventory-type">Telegram like app</div>
+            </div>
+
+            <div class="inventory-slot">
+                <div class="inventory-rarity rarity-epic"></div>
+                <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                </svg>
+                <div class="inventory-name">World of Elements Battle Ground</div>
+                <div class="inventory-type">Roblox Game</div>
+            </div>
+
+            <div class="inventory-slot" onclick="window.open('https://aaayme.github.io/OurJoy-Official-Website/progress.html', '_blank')">
+                <div class="inventory-rarity rarity-rare"></div>
+                <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+                <div class="inventory-name">OurJoy</div>
+                <div class="inventory-type">Adventure Horror Game</div>
+            </div>
+
+            <div class="inventory-slot" onclick="window.open('https://aaayme-c.github.io/AION-Verse/ColorTris.html', '_blank')">
+                <div class="inventory-rarity rarity-uncommon"></div>
+                <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 16 16 12 12 8"/>
+                    <line x1="8" y1="12" x2="16" y2="12"/>
+                </svg>
+                <div class="inventory-name">ColorTris</div>
+                <div class="inventory-type">JavaScript Game</div>
+            </div>
+
+            <div class="inventory-slot">
+                <div class="inventory-rarity rarity-legendary"></div>
+                <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+                <div class="inventory-name">Portfolio Codex</div>
+                <div class="inventory-type">Artifact</div>
+            </div>
+
+            <div class="inventory-slot" onclick="window.open('https://github.com/generalBenmalek', '_blank')">
+                <div class="inventory-rarity rarity-rare"></div>
+                <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                </svg>
+                <div class="inventory-name">GitHub Repository</div>
+                <div class="inventory-type">Tool</div>
+            </div>
+
+            <div class="inventory-slot" onclick="window.open('https://github.com/aaayme', '_blank')">
+                <div class="inventory-rarity rarity-rare"></div>
+                <svg class="inventory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                </svg>
+                <div class="inventory-name">GitHub Personal</div>
+                <div class="inventory-type">Tool</div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!-- Trap Section -->
+    <div class="section" id="trap" style="display: none;">
+        <div class="trap-overlay"></div>
+        <div class="trap-light" id="trapLight"></div>
+        <div class="trap-message">You've been cursed!</div>
+        <button class="trap-button" id="trapPrevBtn">◄</button>
+        <button class="trap-button" id="trapNextBtn">►</button>
+    </div>
+
+    <!-- Memory Card Game Section -->
+    <div class="section" id="memory">
+        <div class="memory-wrapper">
+            <div class="memory-header">
+                <h2 class="memory-title">TRIAL OF MEMORY</h2>
+                <div class="memory-timer" id="memoryTimer">Time: 60s</div>
+            </div>
+
+            <div class="memory-board" id="memoryBoard"></div>
+
+            <div class="memory-result victory" id="memoryVictory">VICTORY!</div>
+            <div class="memory-result defeat" id="memoryDefeat">DEFEAT!</div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="section" id="projects">
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <div class="project-title">DotsChat – Chat Platform</div>
+                <div class="project-description">
+                    A modern messaging platform similar to Telegram, built with Flutter and Node.js.
+                    Features real-time chats, secure message handling, and MongoDB-based data storage
+                    for scalability and performance.
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Flutter</span>
+                    <span class="project-tag">Node.js</span>
+                    <span class="project-tag">MongoDB</span>
+                    <span class="project-tag">Socket.IO</span>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <div class="project-title">World of Elements Battle Ground</div>
+                <div class="project-description">
+                    A Roblox fighting game featuring elemental classes, ultimate skills, bosses, and dynamic combat mechanics.
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Roblox Studio</span>
+                    <span class="project-tag">Lua</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">OurJoy</div>
+                <div class="project-description">
+                    A horror-adventure Roblox game set in a surgical facility with puzzles, traps, and multi-boss encounters.
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Roblox Studio</span>
+                    <span class="project-tag">Lua</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">ColorTris</div>
+                <div class="project-description">
+                    A JavaScript puzzle game inspired by Tetris with smooth animations, sound effects, and color-matching mechanics.
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">JavaScript</span>
+                    <span class="project-tag">HTML</span>
+                    <span class="project-tag">CSS</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">Portfolio Codex</div>
+                <div class="project-description">
+                    A responsive personal portfolio website built with HTML, CSS, and JavaScript showcasing my RPG-themed projects.
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">JavaScript</span>
+                    <span class="project-tag">HTML</span>
+                    <span class="project-tag">CSS</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="section" id="contact">
+        <div class="contact-container">
+            <div class="contact-item">
+                <div class="contact-label">📧 Email Personal</div>
+                <div class="contact-value">omary2663@gmail.com</div>
+            </div>
+
+            <div class="contact-item" onclick="window.open('https://github.com/aaayme', '_blank')">
+                <div class="contact-label">🎮 GitHub Personal</div>
+                <div class="contact-value">https://github.com/aaayme</div>
+            </div>
+
+            <div class="contact-item" onclick="window.open('https://github.com/generalBenmalek', '_blank')">
+                <div class="contact-label">🎮 GitHub School</div>
+                <div class="contact-value">https://github.com/generalBenmalek</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="nav-buttons">
+    <button class="nav-btn" id="prevBtn">◄</button>
+    <button class="nav-btn" id="nextBtn">►</button>
+</div>
+
+<script src="benmalek/js/welcome.js"></script>
+<script src="benmalek/js/config.js"></script>
+<script src="benmalek/js/colorTris.js"></script>
+<script src="benmalek/js/cardGame.js"></script>
+<script src="benmalek/js/navigator.js"></script>
+
+<script>
+
+    // Trap mechanics
+    function checkTrap() {
+        if (!trapActive && !doorsActive && Math.random() < 0.15) {
+            const trapType = Math.random();
+            if (trapType < 0.7) {
+                activateTrap(); // Original cursor trap
+            } else {
+                activateMemoryTrap(); // New Memory trap
+            }
+            return true;
+        }
+        return false;
+    }
+
+    function activateTrap() {
+        trapActive = true;
+        isTrapped = true;
+        document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
+        document.getElementById('trap').style.display = 'block';
+        document.querySelector('.nav-buttons').style.display = 'none';
+        document.querySelector('.section-indicator').style.display = 'none';
+
+        const trapPrevBtn = document.getElementById('trapPrevBtn');
+        const trapNextBtn = document.getElementById('trapNextBtn');
+
+        randomizeButtonPosition(trapPrevBtn);
+        randomizeButtonPosition(trapNextBtn);
+        startButtonFlee();
+    }
+
+    function randomizeButtonPosition(button) {
+        const maxX = window.innerWidth - 100;
+        const maxY = window.innerHeight - 100;
+        button.style.left = (50 + Math.random() * (maxX - 100)) + 'px';
+        button.style.top = (50 + Math.random() * (maxY - 100)) + 'px';
+    }
+
+    function fleeFromMouse(button, mouseX, mouseY) {
+        const rect = button.getBoundingClientRect();
+        const buttonCenterX = rect.left + rect.width / 2;
+        const buttonCenterY = rect.top + rect.height / 2;
+        const dx = buttonCenterX - mouseX;
+        const dy = buttonCenterY - mouseY;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < 200) {
+            button.classList.add('fleeing');
+            const angle = Math.atan2(dy, dx);
+            const fleeDistance = 150;
+            let newX = buttonCenterX + Math.cos(angle) * fleeDistance;
+            let newY = buttonCenterY + Math.sin(angle) * fleeDistance;
+            const margin = 60;
+            newX = Math.max(margin, Math.min(window.innerWidth - margin, newX));
+            newY = Math.max(margin, Math.min(window.innerHeight - margin, newY));
+            button.style.left = (newX - rect.width / 2) + 'px';
+            button.style.top = (newY - rect.height / 2) + 'px';
+            setTimeout(() => button.classList.remove('fleeing'), 300);
+        }
+    }
+
+    let fleeInterval;
+
+    function startButtonFlee() {
+        const trapPrevBtn = document.getElementById('trapPrevBtn');
+        const trapNextBtn = document.getElementById('trapNextBtn');
+        fleeInterval = setInterval(() => {
+            if (isTrapped) {
+                const mouseX = window.mouseX || window.innerWidth / 2;
+                const mouseY = window.mouseY || window.innerHeight / 2;
+                fleeFromMouse(trapPrevBtn, mouseX, mouseY);
+                fleeFromMouse(trapNextBtn, mouseX, mouseY);
+            }
+        }, 100);
+    }
+
+    function stopButtonFlee() {
+        if (fleeInterval) {
+            clearInterval(fleeInterval);
+        }
+    }
+
+    function escapeTrap() {
+        trapActive = false;
+        isTrapped = false;
+        stopButtonFlee();
+
+        // Clean up memory game if active
+        if (memoryTimer) {
+            clearInterval(memoryTimer);
+            memoryTimer = null;
+        }
+
+        document.getElementById('trap').style.display = 'none';
+        document.querySelector('.nav-buttons').style.display = 'flex';
+        document.querySelector('.section-indicator').style.display = 'block';
+        showSection(currentSection);
+    }
+
+    window.mouseX = window.innerWidth / 2;
+    window.mouseY = window.innerHeight / 2;
+
+    const trapLight = document.getElementById('trapLight');
+
+    document.addEventListener('mousemove', (e) => {
+        window.mouseX = e.clientX;
+        window.mouseY = e.clientY;
+        if (isTrapped && trapLight) {
+            trapLight.style.left = e.clientX + 'px';
+            trapLight.style.top = e.clientY + 'px';
+        }
+    });
+
+    document.getElementById('trapPrevBtn').addEventListener('click', () => {
+        escapeTrap();
+        prevSection();
+    });
+
+    document.getElementById('trapNextBtn').addEventListener('click', () => {
+        escapeTrap();
+        nextSection();
+    });
+
+    // Skill Tree System
+    let currentZoom = 1;
+    let isDragging = false;
+    let startX, startY;
+
+    const skills = {
+        // root
+        core: { name: 'Core', x: 0, y: 0, unlocked: true, cost: 0, level: 1 },
+
+        // === Fundamentals / Languages ===
+        python:     { name: 'Python',      x: -700,  y: -300, unlocked: false, cost: 3, level: 0, parent: 'core' },
+        javascript: { name: 'JavaScript',  x:  700,  y: -300, unlocked: false, cost: 3, level: 0, parent: 'core' },
+        cplusplus:  { name: 'C++',         x: -700,  y:  300, unlocked: false, cost: 3, level: 0, parent: 'core' },
+        csharp:     { name: 'C#',          x:  700,  y:  300, unlocked: false, cost: 3, level: 0, parent: 'core' },
+        java:       { name: 'Java',        x: 1200,  y:  260, unlocked: false, cost: 3, level: 0, parent: 'core' },
+        rust:       { name: 'Rust',        x: -1200, y:  260, unlocked: false, cost: 4, level: 0, parent: 'core' },
+        go:         { name: 'Go',          x: 1200,  y:  -40, unlocked: false, cost: 4, level: 0, parent: 'core' },
+
+        // === Algorithms / CS fundamentals ===
+        ds_algo:       { name: 'Data Structures & Algorithms', x:    0, y: -720, unlocked: false, cost: 4, level: 0, parent: 'core' },
+        complexity:    { name: 'Complexity Analysis',           x: -350, y: -900, unlocked: false, cost: 2, level: 0, parent: 'ds_algo' },
+        graph_algos:   { name: 'Graph Algorithms',             x: -700, y:-1040, unlocked: false, cost: 3, level: 0, parent: 'ds_algo' },
+        dynamic_prog:  { name: 'Dynamic Programming',          x:  350, y:-1040, unlocked: false, cost: 3, level: 0, parent: 'ds_algo' },
+        system_design: { name: 'System Design',                x:    0, y:-1320, unlocked: false, cost: 5, level: 0, parent: 'ds_algo' },
+
+        // === Databases & Data Engineering ===
+        databases:  { name: 'Databases',      x: -260, y:  700, unlocked: false, cost: 3, level: 0, parent: 'core' },
+        sql:        { name: 'SQL',            x: -550, y:  860, unlocked: false, cost: 3, level: 0, parent: 'databases' },
+        postgresql: { name: 'PostgreSQL',     x: -880, y: 1000, unlocked: false, cost: 4, level: 0, parent: 'sql' },
+        mysql:      { name: 'MySQL',          x: -220, y: 1000, unlocked: false, cost: 4, level: 0, parent: 'sql' },
+        nosql:      { name: 'NoSQL',          x:   40, y:  860, unlocked: false, cost: 3, level: 0, parent: 'databases' },
+        mongodb:    { name: 'MongoDB',        x:   40, y: 1040, unlocked: false, cost: 4, level: 0, parent: 'nosql' },
+        redis:      { name: 'Redis',          x:  360, y: 1040, unlocked: false, cost: 4, level: 0, parent: 'nosql' },
+        data_eng:   { name: 'Data Engineering', x: -260, y:1040, unlocked: false, cost: 5, level: 0, parent: 'databases' },
+        etl:        { name: 'ETL / Pipelines',  x: -570, y:1300, unlocked: false, cost: 4, level: 0, parent: 'data_eng' },
+        spark:      { name: 'Spark / Big Data', x: -110, y:1360, unlocked: false, cost: 5, level: 0, parent: 'data_eng' },
+
+        // === Python Path / Data Science & ML ===
+        dataanalysis: { name: 'Data Analysis', x: -1050, y:  -80, unlocked: false, cost: 4, level: 0, parent: 'python' },
+        pandas:       { name: 'Pandas',        x: -1450, y:   80, unlocked: false, cost: 4, level: 0, parent: 'dataanalysis' },
+        numpy:        { name: 'NumPy',         x: -1450, y: -240, unlocked: false, cost: 4, level: 0, parent: 'dataanalysis' },
+        viz:          { name: 'Data Visualization', x: -1050, y: 240, unlocked: false, cost: 3, level: 0, parent: 'dataanalysis' },
+
+        ml:           { name: 'Machine Learning', x: -1550, y: -560, unlocked: false, cost: 5, level: 0, parent: 'python' },
+        sklearn:      { name: 'scikit-learn',     x: -1870, y: -720, unlocked: false, cost: 4, level: 0, parent: 'ml' },
+        tensorflow:   { name: 'TensorFlow',       x: -2100, y: -840, unlocked: false, cost: 6, level: 0, parent: 'ml' },
+        pytorch:      { name: 'PyTorch',          x: -1870, y: -360, unlocked: false, cost: 6, level: 0, parent: 'ml' },
+        deeplearning: { name: 'Deep Learning',    x: -2420, y: -720, unlocked: false, cost: 7, level: 0, parent: 'tensorflow' },
+        nlp:          { name: 'NLP',              x: -2420, y: -960, unlocked: false, cost: 7, level: 0, parent: 'pytorch' },
+        cv:           { name: 'Computer Vision',  x: -2420, y: -320, unlocked: false, cost: 7, level: 0, parent: 'pytorch' },
+        mlops:        { name: 'MLOps',            x: -1720, y: -160, unlocked: false, cost: 6, level: 0, parent: 'ml' },
+
+        // === JavaScript / Web Path ===
+        frontend: { name: 'Frontend',   x: 1140,  y: -820, unlocked: false, cost: 4, level: 0, parent: 'javascript' },
+        react:    { name: 'React',      x: 1540,  y: -900, unlocked: false, cost: 4, level: 0, parent: 'frontend' },
+        vue:      { name: 'Vue.js',     x: 1540,  y: -660, unlocked: false, cost: 4, level: 0, parent: 'frontend' },
+        svelte:   { name: 'Svelte',     x: 1800,  y: -820, unlocked: false, cost: 4, level: 0, parent: 'frontend' },
+        ssr:      { name: 'SSR / Next.js', x: 1892, y:-960, unlocked: false, cost: 5, level: 0, parent: 'react' },
+
+        backend: { name: 'Backend',   x:  836, y:  -80, unlocked: false, cost: 4, level: 0, parent: 'javascript' },
+        nodejs:  { name: 'Node.js',   x: 1232, y:  -44, unlocked: false, cost: 4, level: 0, parent: 'backend' },
+        express: { name: 'Express.js',x: 1584, y:   80, unlocked: false, cost: 4, level: 0, parent: 'nodejs' },
+        nest:    { name: 'NestJS',    x: 1232, y:  240, unlocked: false, cost: 5, level: 0, parent: 'backend' },
+        apis:    { name: 'REST / GraphQL', x: 1980, y:   40, unlocked: false, cost: 4, level: 0, parent: 'backend' },
+
+        // === Mobile / Cross-platform ===
+        mobile:      { name: 'Mobile Dev',     x: 1144, y: -572, unlocked: false, cost: 4, level: 0, parent: 'javascript' },
+        flutter:     { name: 'Flutter',        x: 1540, y: -572, unlocked: false, cost: 5, level: 0, parent: 'mobile' },
+        reactnative: { name: 'React Native',   x: 1804, y: -484, unlocked: false, cost: 5, level: 0, parent: 'mobile' },
+        android:     { name: 'Android (Kotlin)', x:1540, y: -240, unlocked: false, cost: 5, level: 0, parent: 'mobile' },
+
+        // === Cloud / DevOps / Security ===
+        cloud:      { name: 'Cloud',         x:  528, y:  840, unlocked: false, cost: 5, level: 0, parent: 'core' },
+        docker:     { name: 'Docker',        x:  792, y: 1040, unlocked: false, cost: 4, level: 0, parent: 'cloud' },
+        kubernetes: { name: 'Kubernetes',    x: 1056, y: 1240, unlocked: false, cost: 7, level: 0, parent: 'docker' },
+        ci_cd:      { name: 'CI/CD',         x:  264, y: 1040, unlocked: false, cost: 5, level: 0, parent: 'cloud' },
+        aws:        { name: 'AWS',           x:  792, y: 1320, unlocked: false, cost: 7, level: 0, parent: 'cloud' },
+        security:   { name: 'App Security',  x: 1056, y: 1520, unlocked: false, cost: 6, level: 0, parent: 'cloud' },
+
+        // === Testing / Quality ===
+        testing:    { name: 'Testing',       x:  264, y:  660, unlocked: false, cost: 3, level: 0, parent: 'core' },
+        unit_tests: { name: 'Unit Testing',  x:   44, y:  720, unlocked: false, cost: 2, level: 0, parent: 'testing' },
+        integration:{ name: 'Integration Tests', x:484, y: 720, unlocked: false, cost: 3, level: 0, parent: 'testing' },
+        e2e:        { name: 'E2E',           x:  264, y:  880, unlocked: false, cost: 3, level: 0, parent: 'testing' },
+
+        // === Game Dev (expanded "gaming road") ===
+        gamedev:        { name: 'Game Development',    x: 1980, y:  660, unlocked: false, cost: 4, level: 0, parent: 'core' },
+        engines:        { name: 'Game Engines',        x: 2420, y:  660, unlocked: false, cost: 4, level: 0, parent: 'gamedev' },
+        unity:          { name: 'Unity',               x: 2750, y:  528, unlocked: false, cost: 5, level: 0, parent: 'engines' },
+        unreal:         { name: 'Unreal Engine',       x: 2750, y:  720, unlocked: false, cost: 6, level: 0, parent: 'engines' },
+        godot:          { name: 'Godot',               x: 2420, y:  924, unlocked: false, cost: 4, level: 0, parent: 'engines' },
+
+        // Game subpaths
+        game_scripting: { name: 'Scripting (Lua/C#)', x: 3080, y:  528, unlocked: false, cost: 4, level: 0, parent: 'unity' },
+        game_cpp:       { name: 'Engine C++',         x: 3080, y:  720, unlocked: false, cost: 6, level: 0, parent: 'unreal' },
+        game_design:    { name: 'Game Design',        x: 2156, y:  396, unlocked: false, cost: 3, level: 0, parent: 'gamedev' },
+        level_design:   { name: 'Level Design',       x: 2376, y:  264, unlocked: false, cost: 3, level: 0, parent: 'game_design' },
+        uiux_game:      { name: 'UI/UX for Games',    x: 2376, y:  120, unlocked: false, cost: 2, level: 0, parent: 'game_design' },
+
+        // Graphics / rendering
+        shaders:        { name: 'Shaders (HLSL/GLSL)', x: 3300, y:  704, unlocked: false, cost: 6, level: 0, parent: 'engines' },
+        rendering:      { name: 'Real-time Rendering',  x: 3300, y:  840, unlocked: false, cost: 6, level: 0, parent: 'engines' },
+        vfx:            { name: 'VFX / Particles',     x: 2904, y:  704, unlocked: false, cost: 4, level: 0, parent: 'shaders' },
+
+        // Game AI & systems
+        game_ai:        { name: 'Game AI',            x: 2640, y:  960, unlocked: false, cost: 5, level: 0, parent: 'engines' },
+        navmesh:        { name: 'Pathfinding / NavMesh', x:2992, y:  960, unlocked: false, cost: 4, level: 0, parent: 'game_ai' },
+        gameplay_ai:    { name: 'Behavior Trees',     x: 2816, y: 1080, unlocked: false, cost: 4, level: 0, parent: 'game_ai' },
+
+        // Animation / audio
+        animation:      { name: 'Animation',          x: 2640, y:  440, unlocked: false, cost: 4, level: 0, parent: 'engines' },
+        rigging:        { name: 'Rigging',            x: 2992, y:  440, unlocked: false, cost: 4, level: 0, parent: 'animation' },
+        audio_design:   { name: 'Game Audio',         x: 2640, y:  264, unlocked: false, cost: 3, level: 0, parent: 'engines' },
+
+        // Networking / Live Ops
+        multiplayer:     { name: 'Multiplayer / Networking', x:2200, y: 1320, unlocked: false, cost: 6, level: 0, parent: 'gamedev' },
+        rollback_netcode:{ name: 'Rollback Netcode',  x:2552, y:1364, unlocked: false, cost: 6, level: 0, parent: 'multiplayer' },
+        server_arch:     { name: 'Server Architecture', x:2024, y:1400, unlocked: false, cost: 6, level: 0, parent: 'multiplayer' },
+
+        // Optimization / profiling / monetization
+        perf_opt:       { name: 'Performance & Optimization', x:2904, y:1364, unlocked: false, cost: 5, level: 0, parent: 'engines' },
+        profiling:      { name: 'Profiling Tools',    x:3256, y:1364, unlocked: false, cost: 4, level: 0, parent: 'perf_opt' },
+        monetization:   { name: 'Monetization & Live Ops', x:2904, y:1584, unlocked: false, cost: 4, level: 0, parent: 'multiplayer' },
+
+        // === Misc / Productivity ===
+        tooling:  { name: 'Developer Tooling', x: -264, y: 1360, unlocked: false, cost: 2, level: 0, parent: 'core' },
+        git:      { name: 'Git',               x: -572, y: 1520, unlocked: false, cost: 1, level: 0, parent: 'tooling' },
+        ci:       { name: 'CI (GitHub Actions)', x: -44,  y: 1520, unlocked: false, cost: 2, level: 0, parent: 'tooling' },
+        editors:  { name: 'Editors & IDEs',   x: -264, y: 1640, unlocked: false, cost: 1, level: 0, parent: 'tooling' },
+
+        // === AI Research / Advanced topics ===
+        rl:           { name: 'Reinforcement Learning', x:-2750, y:-1040, unlocked: false, cost: 7, level: 0, parent: 'deeplearning' },
+        transformers: { name: 'Transformers',           x:-2860, y: -840, unlocked: false, cost: 7, level: 0, parent: 'nlp' },
+
+        // === UX / Design / Soft Skills ===
+        ux:            { name: 'UX / Product',     x:  924, y:  440, unlocked: false, cost: 2, level: 0, parent: 'core' },
+        communication: { name: 'Communication',    x: 1188, y:  520, unlocked: false, cost: 1, level: 0, parent: 'ux' },
+        leadership:    { name: 'Leadership',       x: 1452, y:  600, unlocked: false, cost: 2, level: 0, parent: 'ux' },
+
+        // === Extras / Bridges ===
+        web3:     { name: 'Web3 / Smart Contracts', x:   88, y: 1640, unlocked: false, cost: 6, level: 0, parent: 'cloud' },
+        solidity: { name: 'Solidity',              x:  484, y: 1640, unlocked: false, cost: 6, level: 0, parent: 'web3' },
+
+        // === Example "final" masteries (end nodes) ===
+        fullstack_master: { name: 'Full-Stack Mastery', x: 2156, y: -240, unlocked: false, cost: 8, level: 0, parent: 'apis' },
+        ai_master:         { name: 'AI Mastery',         x:-2970, y:-1200, unlocked: false, cost:10, level: 0, parent: 'rl' },
+        game_master:       { name: 'Game Architect',     x:3344,  y: 1520, unlocked: false, cost:10, level: 0, parent: 'monetization' }
+    };
+
+    function createSkillTree() {
+        const canvas = document.getElementById('skillTreeCanvas');
+        canvas.innerHTML = '';
+
+        Object.keys(skills).forEach(key => {
+            const skill = skills[key];
+            if (skill.parent) {
+                const parent = skills[skill.parent];
+                const branch = document.createElement('div');
+                branch.className = 'tree-branch' + (skill.unlocked && parent.unlocked ? ' unlocked' : '');
+                const dx = skill.x - parent.x;
+                const dy = skill.y - parent.y;
+                const length = Math.sqrt(dx * dx + dy * dy);
+                const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+                branch.style.width = length + 'px';
+                branch.style.left = '50%';
+                branch.style.top = '50%';
+                branch.style.transform = `translate(${parent.x}px, ${parent.y}px) rotate(${angle}deg)`;
+                canvas.appendChild(branch);
+            }
+        });
+
+        const core = document.createElement('div');
+        core.className = 'tree-center';
+        core.innerHTML = '<div class="tree-core">Skills</div>';
+        canvas.appendChild(core);
+
+        Object.keys(skills).forEach(key => {
+            if (key === 'core') return;
+            const skill = skills[key];
+            const node = document.createElement('div');
+            node.className = 'skill-node' + (skill.unlocked ? ' unlocked' : '');
+            node.style.left = '50%';
+            node.style.top = '50%';
+            node.style.transform = `translate(calc(-50% + ${skill.x}px), calc(-50% + ${skill.y}px))`;
+            node.innerHTML = `
+                    <div class="skill-node-name">${skill.name}</div>
+                    <div class="skill-node-level">Lv ${skill.level}/3</div>
+                    <div class="skill-node-cost">${skill.cost} SP</div>
+                `;
+            node.addEventListener('click', () => unlockSkill(key));
+            canvas.appendChild(node);
+        });
+        updateSkillPoints();
+    }
+
+    function unlockSkill(skillKey) {
+        const skill = skills[skillKey];
+        if (skill.unlocked && skill.level >= 3) return;
+        if (skill.parent && !skills[skill.parent].unlocked) return;
+        if (skillPoints >= skill.cost) {
+            skillPoints -= skill.cost;
+            skill.unlocked = true;
+            skill.level = Math.min(skill.level + 1, 3);
+            createSkillTree();
+        }
+    }
+
+    function updateSkillPoints() {
+        document.getElementById('skillPointsDisplay').textContent = skillPoints;
+        document.getElementById('gameSkillPoints').textContent = skillPoints;
+    }
+
+    const treeContainer = document.getElementById('skillTreeContainer');
+    const treeCanvas = document.getElementById('skillTreeCanvas');
+
+    treeContainer.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startX = e.pageX - treeCanvas.offsetLeft;
+        startY = e.pageY - treeCanvas.offsetTop;
+    });
+
+    treeContainer.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - startX;
+        const y = e.pageY - startY;
+        treeCanvas.style.left = x + 'px';
+        treeCanvas.style.top = y + 'px';
+    });
+
+    treeContainer.addEventListener('mouseup', () => {
+        isDragging = false;
+    });
+
+    treeContainer.addEventListener('mouseleave', () => {
+        isDragging = false;
+    });
+
+    document.getElementById('zoomIn').addEventListener('click', () => {
+        currentZoom = Math.min(currentZoom + 0.2, 2);
+        treeCanvas.style.transform = `scale(${currentZoom})`;
+    });
+
+    document.getElementById('zoomOut').addEventListener('click', () => {
+        currentZoom = Math.max(currentZoom - 0.2, 0.5);
+        treeCanvas.style.transform = `scale(${currentZoom})`;
+    });
+
+    document.getElementById('resetZoom').addEventListener('click', () => {
+        currentZoom = 1;
+        treeCanvas.style.transform = 'scale(1)';
+        treeCanvas.style.left = '-50%';
+        treeCanvas.style.top = '-50%';
+    });
+
+    document.getElementById('characterName').textContent = characterName;
+
+    function animateStats() {
+        const statFills = document.querySelectorAll('.stat-fill');
+        setTimeout(() => {
+            statFills.forEach(fill => {
+                const value = fill.getAttribute('data-value');
+                fill.style.width = value + '%';
+            });
+        }, 300);
+
+        const vitalFills = document.querySelectorAll('.vital-fill');
+        setTimeout(() => {
+            vitalFills.forEach(fill => {
+                const value = fill.getAttribute('data-value');
+                fill.style.width = value + '%';
+            });
+        }, 500);
+    }
+
+    function showSection(index) {
+        // Clean up memory game if leaving it
+        if (memoryTimer) {
+            clearInterval(memoryTimer);
+            memoryTimer = null;
+        }
+
+        document.querySelectorAll('.section').forEach(s => {
+            s.classList.remove('active');
+            s.style.display = 'none';
+        });
+        document.getElementById(sections[index]).classList.add('active');
+        document.getElementById(sections[index]).style.display = 'block';
+        document.getElementById('sectionIndicator').textContent = sectionNames[index];
+
+        if (sections[index] === 'stats') {
+            animateStats();
+        }
+
+        if (sections[index] === 'skills' && !document.querySelector('.skill-node')) {
+            createSkillTree();
+        }
+    }
+
+    function nextSection() {
+        if (checkTrap()) return;
+        currentSection = (currentSection + 1) % sections.length;
+        showSection(currentSection);
+    }
+
+    function prevSection() {
+        if (checkTrap()) return;
+        currentSection = (currentSection - 1 + sections.length) % sections.length;
+        showSection(currentSection);
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', nextSection);
+    document.getElementById('prevBtn').addEventListener('click', prevSection);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' && !document.getElementById('playButton').style.display === 'none') nextSection();
+        if (e.key === 'ArrowLeft' && !document.getElementById('playButton').style.display === 'none') prevSection();
+    });
+
+    // Initialize
+    createParticles();
+    // Don't call animateStats() here anymore - it will be called when section is shown
+    updateXPDisplay();
+    updateSkillPoints();
+
+    // Hide all sections initially
+    document.querySelectorAll('.section').forEach(s => {
+        s.style.display = 'none';
+    });
+</script>
+</body>
+</html>
