@@ -17,8 +17,17 @@ This project is done as part of the Software Engineering course Programming Assi
 - ### IOUANOUGHENE Tarek [(yuunooioua-lgtm)](https://github.com/yuunooioua-lgtm/)
 
 
-## Retrospective Analysis
-During the project we encountered several challenges that affected team productivity. Communication gaps and differing availability led to missed deadlines and duplicated work. Integrating contributions revealed frequent merge conflicts and inconsistent coding styles, which required extra time for refactoring. Ambiguous requirements and shifting priorities caused rework and unclear task ownership. Tooling and environment discrepancies made local setup and testing difficult for some members. Time management under concurrent commitments limited the depth of reviews and testing. Despite these issues, addressing them through clearer processes, defined coding standards, and more regular syncs helped improve coordination and reduce friction.
-Using Git streamlined our collaboration while building the portfolio website. We worked in parallel without overwriting each other’s code, reviewed changes through pull requests, and resolved conflicts early. Branching improved experimentation, and the shared history gave clarity and accountability. Overall, Git made teamwork faster, safer, and more organized.
-- ### Merge conflict
-One of the major conflicts that we encountered during our work was the different changes made to the index.html file having so many hands on that file caused some issues we site one conflict specifically which was the merge between amani's branch and the develop branch we could not resolve this conflict in the browser solver we had to take it locally to solve it where we had to track the changes one by one and start from the first line to find the problem but due to the team effort we were able to resolve this issue.
+## Team Retrospective Analysis
+
+The most significant technical challenge encountered was the handling of concurrent edits to shared high-traffic files—specifically `index.html` and the global stylesheet. Because multiple features were being developed in parallel and requirements evolved, these files became integration hotspots. This led to recurrent merge conflicts, inconsistent naming conventions, and sections being unintentionally overwritten. The absence of early alignment on coding style and low granularity in task decomposition further amplified refactoring overhead.
+
+A representative merge conflict occurred between Amani’s feature branch and the `develop` branch on `index.html`. The conflict could not be resolved through GitHub’s browser UI because entire sections had diverged rather than isolated lines. The resolution was performed locally by:
+
+1. Pulling the latest `develop` into the local machine and attempting a merge.  
+2. Opening the conflicted file and manually reviewing both sides of the diff.  
+3. Reconstructing the final block by selectively preserving confirmed changes, removing duplicated markup, and restoring broken DOM nesting.  
+4. Re-running the site locally to validate layout and script integrity before committing the resolved version.  
+5. Pushing the resolved merge and having a second reviewer verify before integration.
+
+The pull-request and peer-review workflow materially improved the quality of the final portfolio. PRs served as natural checkpoints to detect regressions, structural violations, and adherence to naming and layout conventions. Reviews surfaced issues earlier—before they reached `main`—and encouraged rationale-based discussion around design decisions rather than silent edits. Although time constraints sometimes compressed review depth, even lightweight reviews caught critical defects that would have otherwise propagated. Overall, the disciplined use of PRs, enforced branching, and required review gates both reduced integration risk and elevated the maintainability and clarity of the final artifact.
+
